@@ -6,16 +6,16 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h4 class="mb-3">Favourite Item</h4>
+          <h4 class="mb-3">Item favorito</h4>
           <hr style="border-color:#b8bfc2;">
         </div>
       
         <table>
             <tr>
-                <th>Image</th>
-                <th>Product Name</th>
-                <th>Unit</th>
-                <th>Remove</th>
+                <th>Imagem</th>
+                <th>Nome do produto</th>
+                <th>Unidade</th>
+                <th>Remover</th>
             </tr>
           
 
@@ -24,7 +24,7 @@
               <td><img src="{{item.product.product_image.url}}" height="75px" alt="{{item.product.name}}"></td>
               <td>{{item.product.name}}</td>
               <td>{{item.product.selling_price | stringformat:'d'}}</td>
-              <td><a href="{% url 'remove_fav' item.id %}"  onclick="return confirm('Are you sure? to Remove')"  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Remove</a></td>
+              <td><a href="{% url 'remove_fav' item.id %}"  onclick="return confirm('Are you sure? to Remove')"  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Remover</a></td>
             </tr>
             {% endfor %}
             <tr>
